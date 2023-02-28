@@ -5,4 +5,4 @@
 # Display in a user-orient format
 # Show process hierarchy
 
-ps-auxf
+ps -auxf
