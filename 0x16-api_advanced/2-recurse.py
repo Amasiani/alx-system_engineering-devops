@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Function to query a list of all hot posts on a given Reddit subreddit."""
-import request
+import requests
 
 
 def recurse(subreddit, hot_list=[], after="", count=0):
