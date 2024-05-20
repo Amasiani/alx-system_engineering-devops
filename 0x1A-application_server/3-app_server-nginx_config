@@ -1,0 +1,48 @@
+ubuntu@161238-web-01:~/AirBnB_clone_v2$ sudo vi /etc/nginx/sites-available/default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+        }
+
+        # serve /number_odd_or_even/ route on AirBnB_clone_v2
+        location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
+                proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        }
+
+        error_page 404 /404.html;
+        location /404 {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                #       try_files $uri $uri/ =404;
+                root /var/www/html;
+                internal;
+        }
+
+        # pass PHP scripts to FastCGI server
+        #
+        #location ~ \.php$ {
+        #       include snippets/fastcgi-php.conf;
+        #
+        #       # With php-fpm (or other unix sockets):
+                                                              58,48-62      61%
+
